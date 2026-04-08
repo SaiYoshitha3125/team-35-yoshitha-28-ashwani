@@ -1,0 +1,90 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1e1e2f;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Links container */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+/* Links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Hover underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00adb5;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active link (React Router NavLink) */
+.active {
+  color: #00adb5;
+  font-weight: bold;
+}
+
+/* Menu icon (hamburger) */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 📱 Responsive design */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1e1e2f;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

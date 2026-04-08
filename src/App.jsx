@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Navbar.jsx";
-import Footer from "./Footer.jsx";
+// import Footer from "./Footer.jsx";
 
 function Home() {
   return <h1>Home Page</h1>;
@@ -31,7 +31,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      <Footer/>
+      {/* <Footer/> */}
     </BrowserRouter>
   );
 }
